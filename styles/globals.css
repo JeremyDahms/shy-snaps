@@ -1,14 +1,44 @@
 html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2rem;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+nav {
+  margin: 5vh 0 80px;
+  display: flex;
+  align-items: center;
+}
+
+nav .logo {
+  margin-right: auto;
+  width: 10vw;
+}
+
+nav .content {
+  display: flex;
+  justify-content: center;
+}
+
+nav .links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25vw;
+}
+
+nav .cart {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  width: 10vw;
 }
 
 * {

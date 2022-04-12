@@ -1,5 +1,23 @@
 .container {
   padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  display: inline-block;
+  position: fixed;
+  top: 40%;
+  width: 25vw;
+  line-height: 3rem;
+  padding-left: 2rem;
+  font-size: 1.2rem;
+}
+
+.search::placeholder {
+  vertical-align: middle;
+  font-size: 1.2rem;
 }
 
 .main {
