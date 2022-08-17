@@ -26,3 +26,29 @@
   grid-gap: 2vw;
   margin-top: 2vw;
 }
+
+.imageDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70vh;
+  margin-top: 5vh;
+  align-items: center;
+}
+
+.imageSection {
+  width: 45%;
+}
+
+.detailsSection {
+  width: 55%;
+}
+
+.imageTitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.imageInfo {
+  margin-bottom: 2rem;
+}

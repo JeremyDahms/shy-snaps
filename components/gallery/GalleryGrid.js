@@ -18,7 +18,7 @@ const GalleryGrid = ({ images }) => {
   return (
     <div className={styles.galleryGrid}>
       {images.map((image) => (
-        <GalleryImage image={image} />
+        <GalleryImage key={image.url} image={image} />
       ))}
     </div>
   );

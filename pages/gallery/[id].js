@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import ImageDetails from '../../components/details/ImageDetails';
+import styles from '../../styles/Gallery.module.css';
 
 export const getStaticPaths = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/photos');
@@ -28,10 +30,15 @@ export const getStaticProps = async (context) => {
 
 const Details = ({ image }) => {
   return (
-    <div>
-      <h1>{image.title}</h1>
-      <Image src={image.url} height='500px' width='500px' />
-    </div>
+    <>
+      <div>{'<- BACK TO GALLERY'}</div>
+      <div className={styles.imageDetailsContainer}>
+        <div className={styles.imageSection}>
+          <Image src={image.url} height='500px' width='500px' />
+        </div>
+        <ImageDetails image={image} />
+      </div>
+    </>
   );
 };
 
