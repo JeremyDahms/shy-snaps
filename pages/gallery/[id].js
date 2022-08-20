@@ -3,12 +3,12 @@ import ImageDetails from '../../components/details/ImageDetails';
 import styles from '../../styles/Gallery.module.css';
 
 export const getStaticPaths = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/photos');
+  const res = await fetch(`${process.env.serverUrl}/images`);
   const data = await res.json();
 
   const paths = data.slice(0, 10).map((image) => {
     return {
-      params: { id: image.id.toString() },
+      params: { id: image.key.toString() },
     };
   });
 
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`);
+  const res = await fetch(`${process.env.serverUrl}/images/${id}`);
   const data = await res.json();
 
   return {
@@ -34,7 +34,7 @@ const Details = ({ image }) => {
       <div>{'<- BACK TO GALLERY'}</div>
       <div className={styles.imageDetailsContainer}>
         <div className={styles.imageSection}>
-          <Image src={image.url} height='500px' width='500px' />
+          <Image src={image.signedUrl} height='500px' width='500px' />
         </div>
         <ImageDetails image={image} />
       </div>

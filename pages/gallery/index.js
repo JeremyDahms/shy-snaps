@@ -4,7 +4,7 @@ import Search from '../../components/Search';
 import styles from '../../styles/Gallery.module.css';
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/photos');
+  const res = await fetch(`${process.env.serverUrl}/images`);
   const data = await res.json();
 
   return {

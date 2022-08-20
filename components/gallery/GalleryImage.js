@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 const GalleryImage = ({ image }) => {
   return (
-    <Link href={`/gallery/${image.id}`} key={image.id}>
+    <Link href={`/gallery/${image.key}`} key={image.key}>
       <a style={{ position: 'relative' }}>
         <Image
-          src={image.thumbnailUrl}
+          src={image.signedUrl}
           alt='pic'
           layout='fill'
           objectFit='cover'
