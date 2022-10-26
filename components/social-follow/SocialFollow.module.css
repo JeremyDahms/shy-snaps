@@ -1,0 +1,22 @@
+.socialContainer {
+  background-color: transparent;
+  margin-top: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70px;
+  justify-content: space-between;
+}
+
+a.social {
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}

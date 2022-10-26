@@ -1,0 +1,59 @@
+.centeredColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container {
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.divider {
+  border-top: 2px solid black;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 75%;
+}
+
+.section {
+  width: 20vw;
+  height: 15rem;
+}
+
+.underline {
+  border-top: 1px solid black;
+}

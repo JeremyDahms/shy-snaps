@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import GalleryGrid from '../../components/gallery/GalleryGrid';
-import Search from '../../components/Search';
+import Search from '../../components/search';
 import styles from '../../styles/Gallery.module.css';
 
 export const getStaticProps = async () => {

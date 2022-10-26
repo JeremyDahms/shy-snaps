@@ -1,5 +1,5 @@
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from './footer';
+import Navbar from './navbar';
 
 const Layout = ({ children }) => {
   return (
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       }}
     >
       <Navbar />
-      <div style={{ paddingBottom: '5rem' }}>{children}</div>
+      <div style={{ paddingBottom: '5rem', minHeight: '80vhvh' }}>{children}</div>
       <Footer />
     </div>
   );
