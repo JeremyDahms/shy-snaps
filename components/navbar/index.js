@@ -6,18 +6,14 @@ const Navbar = () => {
       <div className='logo'>SHY SNAPS</div>
       <div className='content'>
         <div className='links'>
-          <Link href='/'>
-            <a>HOME</a>
-          </Link>
-          <Link href='/gallery'>
-            <a>GALLERY</a>
-          </Link>
-          <Link href='/services'>
-            <a>SERVICES</a>
-          </Link>
+          <Link href='/'>HOME</Link>
+          <Link href='/gallery'>GALLERY</Link>
+          <Link href='/services'>SERVICES</Link>
         </div>
       </div>
-      <div className='cart'>CART</div>
+      <div className='connect'>
+        <Link href='/connect'>CONNECT</Link>
+      </div>
     </nav>
   );
 };

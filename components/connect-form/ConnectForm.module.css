@@ -1,0 +1,48 @@
+.formBox {
+  min-width: 100%;
+  padding-left: 5vw;
+  position: relative;
+}
+
+.doubleRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formBox div input {
+  display: block;
+  height: 5vh;
+  width: 48%;
+  padding: 0.5rem 0.8rem 0.5rem 1.5rem;
+  border: 1px solid black;
+  font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+}
+
+.formBox input {
+  margin: 0.9vw 0;
+}
+
+.formBox input[type='submit'] {
+  height: 5vh;
+  width: 10vw;
+  border: none;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  background-color: white;
+  border: 1px solid black;
+  font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+}
+
+.formBox textarea {
+  height: 25vh;
+  display: block;
+  width: 100%;
+  padding: 0.9rem 0.8rem 0.5rem 1.5rem;
+  margin: 0.9vw 0;
+  border: 1px solid black;
+  font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  resize: none;
+}

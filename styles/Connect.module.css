@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: row; /* or column */
+}
+
+.leftSection {
+  flex: 0.65;
+}
+
+.rightSection {
+  flex: 1;
+}
+
+.header {
+  font-size: 2em;
+}
