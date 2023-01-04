@@ -1,0 +1,20 @@
+.toggleButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggleButton .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .toggleButton {
+    display: flex;
+  }
+}

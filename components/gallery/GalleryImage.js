@@ -6,7 +6,7 @@ const GalleryImage = ({ image }) => {
     <Link href={`/gallery/${image.key}`} key={image.key}>
       <a style={{ position: 'relative' }}>
         <Image
-          src={image.signedUrl}
+          src={`http://localhost:8080/images/${image.key}`}
           alt='pic'
           layout='fill'
           objectFit='cover'

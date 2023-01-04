@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
       style={{
         position: 'relative',
         minHeight: '100vh',
-        margin: '0 50px 0 50px',
+        margin: '100px 50px 0 50px',
       }}
     >
       <Navbar />

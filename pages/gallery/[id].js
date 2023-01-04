@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch(`${process.env.serverUrl}/images/${id}`);
+  const res = await fetch(`${process.env.serverUrl}/images/${id}/signedUrl`);
   const data = await res.json();
 
   return {
@@ -34,7 +34,9 @@ const Details = ({ image }) => {
       <div>{'<- BACK TO GALLERY'}</div>
       <div className={styles.imageDetailsContainer}>
         <div className={styles.imageSection}>
-          <Image src={image.signedUrl} height='500px' width='500px' />
+          <div className={styles.imageContainer}>
+            <Image src={image.signedUrl} layout='fill' objectFit='contain' />
+          </div>
         </div>
         <ImageDetails image={image} />
       </div>
