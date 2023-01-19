@@ -8,7 +8,7 @@ const Connect = () => {
   return (
     <div className={styles.container}>
       <div className={styles.leftSection}>
-        <div className={styles.header}>Let's Connect</div>
+        <div className={styles.header}>Let&apos;s Connect</div>
         <p>
           Ready to make art together? I would love to hear more about your
           project :)

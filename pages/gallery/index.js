@@ -3,15 +3,7 @@ import GalleryGrid from '../../components/gallery';
 import Search from '../../components/search';
 import styles from '../../styles/Gallery.module.css';
 
-export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.serverUrl}/images`);
-  const data = await res.json();
-  return {
-    props: { images: data.slice(0, 10) },
-  };
-};
-
-const Gallery = ({ images }) => {
+const Gallery = () => {
   return (
     <>
       <Head>
@@ -23,7 +15,7 @@ const Gallery = ({ images }) => {
         <div>Sort</div>
         <Search style={styles.search} />
       </div>
-      <GalleryGrid images={images} />
+      <GalleryGrid />
     </>
   );
 };

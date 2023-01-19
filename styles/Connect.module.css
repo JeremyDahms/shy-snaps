@@ -14,3 +14,9 @@
 .header {
   font-size: 2em;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* or column */
+  }
+}

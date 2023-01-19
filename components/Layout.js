@@ -7,11 +7,18 @@ const Layout = ({ children }) => {
       style={{
         position: 'relative',
         minHeight: '100vh',
-        margin: '100px 50px 0 50px',
+        margin: '0px 50px',
       }}
     >
       <Navbar />
-      <div style={{ paddingBottom: '5rem', minHeight: '80vhvh' }}>{children}</div>
+      <div
+        style={{
+          padding: '5rem 0',
+          minHeight: '80vhvh',
+        }}
+      >
+        {children}
+      </div>
       <Footer />
     </div>
   );

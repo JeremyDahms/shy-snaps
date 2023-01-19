@@ -58,8 +58,12 @@
   border-top: 1px solid black;
 }
 
-@media (max-width: 600px) {
-  .centeredColumn {
-    display: none;
+@media (max-width: 768px) {
+  .content {
+    justify-content: center;
+  }
+
+  .section {
+    width: 100%;
   }
 }

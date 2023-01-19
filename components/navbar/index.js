@@ -1,67 +1,32 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import HamburgerMenu from '../hamburger-menu';
 import styles from './NavBar.module.css';
 
-const MobileLinks = () => {
-  return (
-    <div className={styles.mobileLinks}>
-      <ul>
-        <li>
-          <Link href='/'>HOME</Link>
-        </li>
-        <li>
-          <Link href='/gallery'>GALLERY</Link>
-        </li>
-        <li>
-          <Link href='/services'>SERVICES</Link>
-        </li>
-        <li>
-          <Link href='/connect'>CONNECT</Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
-
 const Navbar = () => {
-  const [showMobileDropdown, setShowMobileDropdown] = useState(false);
-
-  console.log(showMobileDropdown);
-
+  const [showNav, setShowNav] = useState(false);
   const handleClick = () => {
-    setShowMobileDropdown(!showMobileDropdown);
+    console.log('????');
+    setShowNav((prev) => !prev);
   };
 
   return (
-    <>
-      <nav>
-        <div className='logo'>SHY SNAPS</div>
-        <div className='content'>
-          <ul className='links'>
-            <li>
-              <Link href='/'>HOME</Link>
-            </li>
-            <li>
-              <Link href='/gallery'>GALLERY</Link>
-            </li>
-            <li>
-              <Link href='/services'>SERVICES</Link>
-            </li>
-          </ul>
+    <header className={styles.header}>
+      <div className={styles.logo}>SHY SNAPS</div>
+      <nav className={showNav ? styles.responsiveNav : styles.nav}>
+        <div className={styles.links}>
+          <Link href='/' onClick={() => setShowNav(false)}>
+            HOME
+          </Link>
+          <Link href='/gallery'>GALLERY</Link>
+          <Link href='/services'>SERVICES</Link>
         </div>
-        <div className='connect'>
+        <div className={styles.connect}>
           <Link href='/connect'>CONNECT</Link>
         </div>
-
-        <HamburgerMenu onClick={handleClick} />
       </nav>
-      {showMobileDropdown ? (
-        <div>
-          <MobileLinks />
-        </div>
-      ) : null}
-    </>
+      <HamburgerMenu onClick={handleClick} />
+    </header>
   );
 };
 
